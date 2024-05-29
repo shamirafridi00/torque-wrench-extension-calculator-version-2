@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torque Wrench Extension Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Torque Wrench Extension Calculator</h1>
+        <div class="input-section">
+            <h2>Input Section</h2>
+            <div class="input-group">
+                <label for="torque-setting">Recommended Torque for Fastener (M<sub>2</sub>):</label>
+                <input type="number" id="torque-setting">
+                <select id="torque-unit">
+                    <option value="Nm">Nm</option>
+                    <option value="ft-lb">ft-lb</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="wrench-length">Length of Torque Wrench (L<sub>1</sub>):</label>
+                <input type="number" id="wrench-length">
+                <select id="wrench-length-unit">
+                    <option value="inches">inches</option>
+                    <option value="mm">mm</option>
+                </select>
+            </div>
+            <div id="extensions">
+                <div class="extension-group">
+                    <div class="input-group">
+                        <label for="extension-length-0">Length of Extension (part of L<sub>2</sub>):</label>
+                        <input type="number" id="extension-length-0" class="extension-length">
+                        <select id="extension-length-unit-0" class="extension-length-unit">
+                            <option value="inches">inches</option>
+                            <option value="mm">mm</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="angle-0">Angle of Extension:</label>
+                        <input type="number" id="angle-0" class="extension-angle" value="90">
+                    </div>
+                </div>
+            </div>
+            <div class="options">
+                <button id="add-extension" class="btn">Add Extension</button>
+            </div>
+        </div>
+        <div class="results-section">
+            <h2>Results Section</h2>
+            <p id="adjusted-torque">Torque Setting for Wrench (M<sub>1</sub>): </p>
+            <p id="unit-conversion">Unit Conversion: </p>
+        </div>
+        <div class="action-buttons">
+            <button id="calculate" class="btn">Calculate</button>
+            <button id="reset" class="btn">Reset</button>
+            <button id="print" class="btn">Print/Save as PDF</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
